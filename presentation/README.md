@@ -5,19 +5,28 @@ paginate: true
 backgroundColor: #ffff
 color: #ffff
 colorSecondary: #00CFCC
-backgroundImage: url('images/background-default.png')
+backgroundImage: url('images/background-body.png')
 style: |
     section{
       font-family: "Lucida Console", "Courier New", monospace;
     }
 ---
-
+![bg](images/background-default.png)
 # **Opensearch**
 ## Ferramenta de Análise de dados poderosa e Opensource
 
 ---
 
-![bg right:50% 80% ](images/fotinha.jpeg)
+![bg](images/me.png)
+
+<style scoped>
+li {
+  list-style-type: square;
+  padding: 0;
+  width: 54%;
+  margin-left: -30px;
+}
+</style>
 
 #### Thaynara Mendes
 - Analista Linux na 4linux
@@ -33,16 +42,33 @@ O Opensearch é uma ferramenta de análise de dados, com ele você consegue real
 
 ---
 
-## Qual a ideia por trás da criação?
+## Como surgiu o Opensearch?
 
 - Projeto Opendistro
 - Mudança de Licença da Elastic
-- Oferecer uma ferramenta de análise de dados totalmente Opensource
+- Oportunidade de oferecer uma ferramenta totalmente opensource
 
 ---
 
+### O que você ganha ao escolher o Opensearch?
 
+- Segurança avançada
+- Geração de alertas
+- Geração de relatórios
 
 ---
 
+## O que você perde ao escolher o Opensearch?
+
+- APM (Application Performance Monitoring)
+- Lens
+- SIEM
+
+---
+
+![bg](images/background-default.png)
+# Laboratório 👩🏾‍🔬
+[Repositório](https://github.com/thaycafe/opensearch_lab_CPGO)
+
+---
 
