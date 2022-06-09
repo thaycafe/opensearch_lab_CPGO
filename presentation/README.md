@@ -42,6 +42,12 @@ O Opensearch é uma ferramenta de análise de dados, com ele você consegue real
 
 ---
 
+<style>
+li {
+  list-style-type: square;
+}
+</style>
+
 ## Como surgiu o Opensearch?
 
 - Projeto Opendistro
@@ -49,6 +55,13 @@ O Opensearch é uma ferramenta de análise de dados, com ele você consegue real
 - Oportunidade de oferecer uma ferramenta totalmente opensource
 
 ---
+
+<style scoped>
+li {
+  list-style-type: square;
+  margin-right: 400px;
+}
+</style>
 
 ### O que você ganha ao escolher o Opensearch?
 
@@ -62,7 +75,14 @@ O Opensearch é uma ferramenta de análise de dados, com ele você consegue real
 
 - APM (Application Performance Monitoring)
 - Lens
-- SIEM
+- SIE
+
+---
+
+### Porque utilizar o Opensearch?
+
+- Cultura Opensource
+- Acesso total a todas as features
 
 ---
 
