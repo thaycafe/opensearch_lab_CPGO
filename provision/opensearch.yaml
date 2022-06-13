@@ -26,7 +26,10 @@
         url: https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-linux-x86_64
         dest: /usr/local/bin/docker-compose
         mode: "+x"
-
-
-
+    - name: Configurando sysctl
+      lineinfile:
+        path: /etc/sysctl.conf
+        line: 'vm.max_map_count=262144'
+    - name: Reload configuration
+      command: sysctl -p
 
