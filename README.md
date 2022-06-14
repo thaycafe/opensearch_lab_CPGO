@@ -91,6 +91,8 @@ PUT /movies/_bulk/
 { "title" : " The Hobbit: An Unexpected Journey", "year":2012 , "genre":[" Adventure", "Fantasy"] }
 { "index":{} }
 { "title" : "Wonder Woman", "year":2017 , "genre":["Action", " Adventure", "Fantasy"] }
+{ "index":{} }
+{ "title" : "Doctor Strange in the Multiverse of Madness", "year":2022 , "genre":["Action", " Adventure", "Fantasy"] }
 ```
 
 Para explorarmos esses dados, é preciso criar um **Index Pattern**, então ao retornar no **Discover** aparecerá uma página para criar o **Index Pattern**, clique em **Create index pattern**:
