@@ -33,6 +33,27 @@ li {
 - Consultora de tecnologia na áreas de **Monitoramento** e **DevOps**
 - Viciada em café e Linux ☕️🐧️
 
+---
+
+<style scoped>
+  h3 {
+    font-size: 40pt;
+    list-style-type: circle;
+    font-weight: 900;
+    color: #fff
+  }
+  p {
+    font-size: 20pt;
+  }
+  {
+   font-size: 35px;
+  }
+</style>
+
+### SORTEIO NO FIM DA PALESTRA!
+![bg right:50% 80%](images/4linux_qrcode.png)
+##### Inscreva-se e participe!
+Escaneie o QRCode
 
 ---
 <style scoped>
@@ -45,7 +66,7 @@ li {
 </style>
 
 
-> ##### O Termo software livre significa que os usuários possuem a liberdade de executar, copiar, distribuir, estudar, mudar e melhorar o software. Assim sendo, “software livre” é uma questão de liberdade, não de preço. Para entender o conceito, pense em “liberdade de expressão”, não em “cerveja grátis”.
+> ##### O termo Software livre significa que os usuários possuem a liberdade de executar, copiar, distribuir, estudar, mudar e melhorar o software. Assim sendo, "software livre" é uma questão de liberdade, não de preço. Para entender o conceito, pense em "liberdade de expressão", não em "cerveja grátis".
 
 *The Free Software Foundation*
 
@@ -83,6 +104,7 @@ li {
 - Segurança avançada
 - Geração de alertas
 - Geração de relatórios
+- Detecção de anomalias
 
 ---
 
@@ -96,15 +118,22 @@ li {
 
 ### Porque utilizar o Opensearch?
 
-- Cultura Opensource
+- Software livre
 - Integração LDAP e Active Directory
 - Detecção de anomalias
 
 ---
+<style scoped>
+  p {
+    font-size: 22pt;
+  }
+</style>
 
-![bg](images/background-default.png)
 # Laboratório 👩🏾‍🔬
-[Repositório](https://github.com/thaycafe/opensearch_lab_CPGO)
+![bg right:45% 90%](images/repo_qrcode.png)
+É só escanear ou acessar o link:
+[https://github.com/thaycafe/opensearch_lab_CPGO](https://github.com/thaycafe/opensearch_lab_CPGO)
+
 
 ---
 
@@ -129,24 +158,10 @@ li {
 ![bg right:60% 98%](images/opensearch-dashboards.gif)
 
 ---
-
 **3. Através do Dev Tools, crie o índice movies:**
 
-```json
-PUT /movies
-{
-   "mappings": {
-       "properties": {
-           "title": {
-               "type": "search_as_you_type"
-           },
-           "genre": {
-               "type": "search_as_you_type"
-           }
-       }
-   }
-}
-```
+![w:900px](images/create_index.png)
+
 ---
 
 ![bg right:98% 98%](images/devtools.gif)
@@ -161,43 +176,32 @@ PUT /movies
 
 **4. Através do Dev Tools, adicione dados via Bulk Insert**
 
-```json
-PUT /movies/_bulk/
-
-{ "index":{} }
-{ "title" : " Predestination", "year":2014 , "genre":["Action", "Drama", "Sci-Fi"] }
-{ "index":{} }
-{ "title" : "Star Wars: Episode VII - The Force Awakens", "year":2015 , "genre":["Action", "Adventure", "Fantasy", "Sci-Fi"] }
-{ "index":{} }
-{ "title" : "Interstellar", "year":2014 , "genre":["Sci-Fi", "Adventure", "Drama"] }
-{ "index":{} }
-{ "title" : "Venom", "year":2018 , "genre":["Action", " Adventure", "Sci-Fi"] }
-{ "index":{} }
-{ "title" : "A Quiet Place Part II", "year":2020 , "genre":["Horror", "Sci-Fi", "Drama"] }
-{ "index":{} }
-{ "title" : "Donnie Darko", "year":2001 , "genre":["Drama", "Sci-Fi", "Mistery"] }
-{ "index":{} }
-{ "title" : "Black Widow", "year":2021 , "genre":["Action", " Adventure", "Sci-Fi"] }
-{ "index":{} }
-{ "title" : "Nobody", "year":2021 , "genre":["Action", "Drama", "Crime"] }
-{ "index":{} }
-{ "title" : "The Dark Knight", "year":2008 , "genre":["Action", "Drama", "Crime"] }
-{ "index":{} }
-{ "title" : "Inception", "year":2010 , "genre":["Action", " Adventure", "Sci-Fi"] }
-{ "index":{} }
-{ "title" : " The Matrix", "year":1999 , "genre":["Action",  "Sci-Fi"] }
-{ "index":{} }
-{ "title" : "Avatar", "year":2009 , "genre":["Action", " Adventure", "Fantasy"] }
-{ "index":{} }
-{ "title" : "Ex Machina", "year":2014 , "genre":["Action", " Adventure", "Sci-Fi"] }
-{ "index":{} }
-{ "title" : " The Hobbit: An Unexpected Journey", "year":2012 , "genre":[" Adventure", "Fantasy"] }
-{ "index":{} }
-{ "title" : "Wonder Woman", "year":2017 , "genre":["Action", " Adventure", "Fantasy"] }
-```
+![w:1100px ](images/bulk_insert.png)
 
 ---
 
 **5. Faça a pesquisa utilizando o script de auto-complete**
 ![bg right:70% 98%](images/search_as_you_type.gif)
+
+---
+
+<style scoped>
+  h1 {
+    font-size: 120px;
+    text-align: center;
+  }
+  p {
+    font-size: 40px;
+    padding: 100px;
+    margin-bottom: -200px;
+  }
+</style>
+
+# Obrigada!
+  
+
+![w:50px](images/instagram.svg.webp) thaycafe
+![w:50px](images/twitter.png) thaycafee
+![w:50px](images/telegram.png) thaycafe
+![w:50px](images/linkedin.png) thaynaramendss
 

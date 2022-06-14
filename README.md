@@ -21,46 +21,46 @@ Para subir o cluster de Opensearch e Opensearch Dashboards basta utilizar o **do
 docker-compose up -d
 ```
 
+![Docker Compose](presentation/images/docker-compose.gif)
+
 ## Analisando dados no Opensearch
 
 Assim que subir os serviços, o Opensearch Dashboards ficará disponível na porta 5601!
 
 > Login: admin:admin
 
-Antes de inserirmos dados, vamos criar uma pipeline para criar um campo chamado "indexed_at":
+![Opensearch Dashboards](presentation/images/opensearch-dashboards.gif)
 
-```json
-PUT /_ingest/pipeline/timestamp
-{
-  "description": "Adicionando o campo indexed_at nos documentos",
-  "processors": [
-    {
-      "set": {
-        "field": "indexed_at",
-        "value": "{{_ingest.timestamp}}"
-      }
-    }
-  ]
-}
-```
+
+Vamos criar o índice e definir um mapeamento utilizando _search_as_you_type_:
 
 > Você pode utilizar o DevTools do Opensearch Dashboards ou alguma ferramenta para fazer essas requisições (curl, insominia, postman ...)
 
-Vamos criar o índice e definir essa pipeline como default:
 
 ```json
 PUT /movies
+
 {
-  "settings": {
-    "index.default_pipeline": "timestamp"
-  }
+   "mappings": {
+       "properties": {
+           "title": {
+               "type": "search_as_you_type"
+           },
+           "genre": {
+               "type": "search_as_you_type"
+           }
+       }
+   }
 }
 ```
 
-Vamos adicionar um bulk request para alguns documentos:
+![Devtools](presentation/images/devtools.gif)
+
+Vamos utilizar um bulk request para adicionar alguns documentos:
 
 ```json
 PUT /movies/_bulk/
+
 { "index":{} }
 { "title" : " Predestination", "year":2014 , "genre":["Action", "Drama", "Sci-Fi"] }
 { "index":{} }
@@ -95,23 +95,8 @@ PUT /movies/_bulk/
 { "title" : "Doctor Strange in the Multiverse of Madness", "year":2022 , "genre":["Action", " Adventure", "Fantasy"] }
 ```
 
-Para explorarmos esses dados, é preciso criar um **Index Pattern**, então ao retornar no **Discover** aparecerá uma página para criar o **Index Pattern**, clique em **Create index pattern**:
+Com esses dados, já conseguimos utilizar o **search_as_you_type** para simular o processo de _autocomplete_. 
 
-**Index pattern name**: movies*
+Exetute o Shell Script que está neste repositório e pesquise por algum filme:
 
-**Time field**: indexed_at
-
-
-
-Apois criar, parecerá todos os campos existentes neste index, podemos alterar o modo de visualização. Por exemplo:
-
-Acesse o campo **year** e clique no ícone de editar:
-
-**Format**: Number
-**Numeral.js format pattern**: 0
-
-Após retornar para o **Discover**, já conseguimos visualizar os documentos que adicionamos:
-![Opensearch Dashboards-Discover](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/e2uqjwo4cjis0jefy72j.png)
-
-
-## Search as you type
+![Search As you Type](presentation/images/search_as_you_type.gif)

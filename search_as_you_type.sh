@@ -1,3 +1,6 @@
+#! /bin/bash
+
+# Para executar o script:
 # apt install jq
 # INPUT=''
 
