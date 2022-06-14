@@ -155,7 +155,7 @@ PUT /movies
 
 <style scoped>
   p {
-    font-size: 29pt;
+    font-size: 22pt;
   }
 </style>
 
@@ -201,4 +201,3 @@ PUT /movies/_bulk/
 **5. Faça a pesquisa utilizando o script de auto-complete**
 ![bg right:70% 98%](images/search_as_you_type.gif)
 
----
