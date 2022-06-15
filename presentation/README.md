@@ -108,7 +108,7 @@ li {
 
 ---
 
-## O que você deixa de ganhar escolher o Opensearch?
+## O que você deixa de ganhar ao escolher o Opensearch?
 
 - APM (Application Performance Monitoring)
 - Lens
@@ -181,7 +181,7 @@ li {
 ---
 
 **5. Faça a pesquisa utilizando o script de auto-complete**
-![bg right:70% 98%](images/search_as_you_type.gif)
+![bg right:67% 98%](images/search_as_you_type.gif)
 
 ---
 
